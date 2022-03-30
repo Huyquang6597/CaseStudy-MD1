@@ -1,0 +1,144 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body
+{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: url("Dinosaurs.jpeg");
+}
+.game
+{
+    height: 400px;
+    width: 1200px;
+    margin: auto;
+    border: 1px solid black;
+    overflow: hidden;
+    background-image: url("https://s3.amazonaws.com/gameartpartnersimagehost/wp-content/uploads/2017/12/Desert_Game_Background_6.jpg");
+    background-size: cover;
+
+}
+#dino
+{
+    height: 70px;
+    width: 70px;
+    position: relative;
+    top:280px;
+    left: 70px;
+    background-image: url("dino.png");
+    background-size: 70px 70px;
+}
+
+
+.jump-animation {
+    animation: jump 1s linear;
+}
+@keyframes jump {
+    0%
+    {
+        top: 280px;
+    }
+    30%
+    {
+        top: 260px;
+    }
+    50%
+    {
+        top: 230px;
+    }
+    80%
+    {
+        top: 260px;
+    }
+    100%
+    {
+        top: 300px;
+    }
+}
+#block
+{
+    height: 70px;
+    width: 70px;
+    position: relative;
+    top: 215px;
+    left: 1100px;
+    animation: blockAnimate 2s infinite linear;
+    background-image: url("block.png");
+    background-size: 70px 70px;
+}
+
+@keyframes blockAnimate {
+    0%
+    {
+        left: 1100px;
+    }
+    100%
+    {
+        left: 0;
+    }
+}
+#road
+{
+    height: 30px;
+    width: 2800px;
+    position: relative;
+    top: 230px;
+    background-image: url("road.png");
+    /*background-size: 10px  -1000px;*/
+    animation: roadAnimate 2s infinite linear;
+}
+
+@keyframes roadAnimate{
+    0%
+    {
+        left: 0;
+    }
+    100%
+    {
+        left: -800px;
+    }
+}
+#cloud
+{
+    height: 80px;
+    width: 100px;
+    border-radius: 40px;
+    position: relative;
+    background-image: url("Cloud.png");
+    top: -150px;
+    left:700px;
+}
+
+
+@keyframes cloudAnimate {
+    0%{
+        left: -1000px;
+    }
+    100%{
+        left: 100%;
+    }
+}
+#score
+{
+    height: auto;
+    width: auto;
+    position: relative;
+    top: -150px;
+    right: -1050px;
+}
+#gameOver
+{
+  display: none;
+    font-size: 100px;
+    position: absolute;
+    left: calc(50% - 181px);
+    top: calc(50% - 130px);
+    width: 362px;
+    height: 80px;
+    color: #525252;
+}
